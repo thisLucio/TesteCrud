@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="../../estilo/style.css">
     <link rel="stylesheet" href="estilo/comum.css">
     <title>Projeto Final Lúcio</title>
 </head>
@@ -11,7 +11,7 @@
     <form action="php/processa.php" method="POST">
 
                     <div class="logo">
-                        <img src="assets/img/user.png" alt="" />
+                        <img src="../../assets/img/user.png" alt="" />
                         <h1>Cadastrar Usuário</h1>
                     </div>
             

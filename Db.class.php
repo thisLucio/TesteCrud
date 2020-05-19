@@ -33,7 +33,7 @@
      function __construct($host="127.0.0.1",
                           $porta="3306",
                           $usudb="root",
-                          $nomedb="unisale_final",
+                          $nomedb="test",
                           $senhadb=""){
      	$this->host     = $host;
      	$this->porta    = $porta;
@@ -157,7 +157,7 @@
    * @param  mixed  $dados Array ou Objeto (objeto deve possuir o método getAllAttributes do trait GetSet)
    * @return boolean
    */
-  public function alterar($dados = null, $where = null){
+  public function alterar($where = null,$dados = null){
 
   if(!is_null($where)){
       $valores = array();

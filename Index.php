@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +14,7 @@
                         <img src="assets/img/user.png" alt="" />
                         <h1>Cadastrar Usuário</h1>
                     </div>
-                    <?php
-                        if(isset($_SESSION['msg'])){
-                            echo $_SESSION['msg'];
-                            unset ($_SESSION['msg']);
-                        }
-                   ?>
-    
+            
                     <div class="form-group">
                         <input type="text" name="nome" placeholder="Digite seu Nome" />
                         <span></span>

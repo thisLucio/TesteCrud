@@ -8,7 +8,7 @@
     <title>Projeto Final Lúcio</title>
 </head>
 <body>
-    <form action="mainUsuario.php" method="POST">
+    <form action="php/processa.php" method="POST">
 
                     <div class="logo">
                         <img src="assets/img/user.png" alt="" />

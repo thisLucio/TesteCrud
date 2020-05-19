@@ -2,11 +2,13 @@
  require_once("Classes/Db.class.php");
  require_once("Classes/Usuario.class.php");
 
+ 
+
  $banco = new Db();
  $banco->conectar();
  $banco->setTabela("usuarios");
  
- $usuario = new Usuario();
+ //$usuario = new Usuario();
  $nome = $_POST['nome'];
  $cpf = $_POST['cpf'];
  $numero = $_POST['telefone'];
@@ -22,8 +24,14 @@
  $usuario->setSenha(MD5($senha));
 
  $usuario->gravar($banco);
+ $nome =  filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+ $cpf =  filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
+ $numero =  filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
+ $email =  filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+ $login =  filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
+ $senha =  filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_ENCODED);
 
-
+ 
  /*
  $usuario->setCpf("11122233344");
  $usuario->setNome("TESTUO NAKUMOTO TESTOK");

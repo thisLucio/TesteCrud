@@ -7,23 +7,35 @@
  $banco = new Db();
  $banco->conectar();
  $banco->setTabela("usuarios");
- 
- //$usuario = new Usuario();
- $nome = $_POST['nome'];
- $cpf = $_POST['cpf'];
- $numero = $_POST['telefone'];
- $email = $_POST['email'];
- $login = $_POST['login'];
- $senha = $_POST['senha'];
 
+ 
+
+ $usuario = new Usuario();
  $usuario->setNome($nome);
  $usuario->setCpf($cpf);
  $usuario->setCelular($numero);
  $usuario->setEmail($email);
  $usuario->setLogin($login);
  $usuario->setSenha(MD5($senha));
-
  $usuario->gravar($banco);
+
+ if(mysqli_insert_id($banco))
+    {
+    $_SESSION['msg'] = "<p style = 'color:green;'>Usuario cadastrado com Sucesso</p>";
+        header("Location: index.php");
+    }
+    else{
+        $_SESSION['msg'] = "<p style = 'color:red;'>Usuario não foi cadastrado</p>";
+        header("Location: index.php");
+    }
+/** 
+ $usuario->setNome($nome);
+ $usuario->setCpf($cpf);
+ $usuario->setCelular($numero);
+ $usuario->setEmail($email);
+ $usuario->setLogin($login);
+ $usuario->setSenha(MD5($senha));
+ 
  $nome =  filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
  $cpf =  filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);
  $numero =  filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);

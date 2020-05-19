@@ -8,7 +8,7 @@ class Usuario
    private $email;
    private $login;
    private $senha;
-
+   
    public function setCpf($cpf)
    {
        $this->cpf = $cpf;

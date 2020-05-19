@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,34 +13,43 @@
 </head>
 <body>
     <form action="mainUsuario.php" method="POST">
-            <fieldset>
+
+                    <div class="logo">
+                        <img src="assets/img/user.png" alt="" />
+                        <h1>Cadastrar Usuário</h1>
+                    </div>
+                    <?php
+                        if(isset($_SESSION['msg'])){
+                            echo $_SESSION['msg'];
+                            unset ($_SESSION['msg']);
+                        }
+                   ?>
+    
                     <div class="form-group">
-                        <label for="form-group">Nome:</label>
-                        <input type="text" name="nome" id="nome">
+                        <input type="text" name="nome" placeholder="Digite seu Nome" />
+                        <span></span>
                     </div>
                     <div class="form-group">
-                        <label for ="cpf">Cpf:</label>
-                        <input type="text" id="cpf" name="cpf">
-                        </label>
+                        <input type="text" name="cpf" placeholder="Digite seu Cpf:" />
+                        <span></span>
                     </div>
                     <div class="form-group">
-                        <label for="telefone">Telefone: </label>
-                        <input type="tel" id="telefone" name="telefone" style="width: 10em" value="">
+                        <input type="text" name="telefone" placeholder="Digite seu Telefone" />
+                        <span></span>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail: </label>
-                        <input type="email" id="email" name="email" style="width: 20em" value="">
+                        <input type="text" name="email" placeholder="Digite seu Email:" />
+                        <span></span>
                     </div>
                     <div class="form-group">
-                        <label for="login">Login:</label>
-                        <input type="text" id="login" name="login">
+                    <input type="text" name="login" placeholder="Digite seu Login" />
+                    <span></span>
                     </div>
                     <div class="form-group">
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha">
+                    <input type="text" name="senha" placeholder="Digite sua" />
+                    <span></span>
                     </div>
-                    <button type="submit" name="submit">Enviar</button>
-            </fieldset>
+                    <button type="submit"">Enviar</button>
         </form>
 </body>
 </html>

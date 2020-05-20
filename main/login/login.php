@@ -1,6 +1,4 @@
-<?php
-    session_start();
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -12,18 +10,12 @@
     <title>Projeto Final Lúcio</title>
 </head>
 <body>
-    <form action="php/processa.php" method="POST">
+    <form action="main.php" method="POST">
 
                     <div class="logo">
                         <img src="../../assets/img/user.png" alt="" />
                         <h1>Login</h1>
                     </div>
-                    <?php
-                        if(isset($_SESSION['msg'])){
-                            echo $_SESSION['msg'];
-                            unset ($_SESSION['msg']);
-                        }
-                    ?>
                     
                     <div class="form-group">
                     <input type="text" name="login" placeholder="Digite seu Login" />

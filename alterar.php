@@ -1,0 +1,75 @@
+<?php
+
+include("conexao.php");
+$pessoa = selectIdPessoa($_POST["idusuarios"]);
+?>
+
+<link rel="stylesheet" type="text/css" href="estilo/table.css">
+<link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/comum.css">
+<meta charset="UTF-8">
+<div class="container">
+    <form name="dadosPessoa" action="conexao.php" method="post">       
+        <div class="logo">
+                        <img src="assets/img/user.png" alt="" />
+                        <h1>Alterar Registro</h1>
+                        </div>
+                
+                        <div class="form-group">
+                            <input type="text" name="nome" value="<?=$pessoa["nome"]?>" size="20" placeholder="Digite seu Nome" />
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="cpf" value="<?=$pessoa["cpf"]?>" size="20" placeholder="Digite seu Cpf:" />
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="celular" value="<?=$pessoa["celular"]?>" size="20" placeholder="Digite seu Telefone" />
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" value="<?=$pessoa["email"]?>" size="20" placeholder="Digite seu Email:" />
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                        <input type="text" name="login" value="<?=$pessoa["login"]?>" size="20" placeholder="Digite seu Login" />
+                        <span></span>
+                        </div>
+                        <div class="form-group">
+                        <input type="text" name="senha" value="<?=$pessoa["senha"]?>" size="20" placeholder="Digite sua senha:" />
+                        <span></span>
+                        </div>
+                        <tr>
+                        <td><input type="hidden" name="acao" value="alterar">
+                            <input type="hidden" name="idusuarios" value="<?=$pessoa["idusuarios"]?>">
+                        </td>
+                        <td><input type="submit" name="Enviar" value="Enviar"></td>
+                    </tr>
+       <!-- <table>
+            <tbody>
+                <tr>
+                    <td>Nome: </td>
+                    <td><input type="text" name="nome" value="<?=$pessoa["nome"]?>" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Nascimento: </td>
+                    <td><input type="date" name="nascimento" value="<?=$pessoa["nascimento"]?>"></td>
+                </tr>
+                <tr>
+                    <td>Telefone: </td>
+                    <td><input type="text" name="telefone" value="<?=$pessoa["telefone"]?>" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Endereço: </td>
+                    <td><input type="text" name="endereco" value="<?=$pessoa["endereco"]?>" size="20"></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" name="acao" value="alterar">
+                        <input type="hidden" name="id" value="<?=$pessoa["id"]?>">
+                    </td>
+                    <td><input type="submit" name="Enviar" value="Enviar"></td>
+                </tr>
+            </tbody> 
+        </table> -->
+    </form>
+</div>

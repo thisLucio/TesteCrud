@@ -33,7 +33,7 @@
      function __construct($host="127.0.0.1",
                           $porta="3306",
                           $usudb="root",
-                          $nomedb="test",
+                          $nomedb="unisale",
                           $senhadb=""){
      	$this->host     = $host;
      	$this->porta    = $porta;

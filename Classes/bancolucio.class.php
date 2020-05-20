@@ -26,4 +26,3 @@ define('USER', 'root');
 define('PASS', '');
 define('BASE', 'unisale');
 
-?>

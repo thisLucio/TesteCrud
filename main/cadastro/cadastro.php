@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,8 @@
     <title>Projeto Final Lúcio</title>
 </head>
 <body>
-    <form action="../../php/processa.php" method="POST">
+    
+    <form action="main.php" method="POST">
 
                     <div class="logo">
                         <img src="../../assets/img/user.png" alt="" />
@@ -36,10 +40,10 @@
                     <span></span>
                     </div>
                     <div class="form-group">
-                    <input type="text" name="senha" placeholder="Digite sua" />
+                    <input type="text" name="senha" placeholder="Digite sua senha:" />
                     <span></span>
                     </div>
-                    <button type="submit"">Enviar</button>
+                    <button name = "cadastrar" type="submit"">Enviar</button>
         </form>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>CRUD com PHP e MYSQL - INSERT</title>
+    <title>Projeto CRUD - Serginho</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="estilo/table.css">
@@ -54,7 +54,7 @@
                           <form name="excluir" action="conexao.php" method="post">
                               <input type="hidden" name="idusuarios" value="<?=$pessoa["idusuarios"]?>">
                               <input type="hidden" name="acao" value="excluir">
-                              <input type="submit" name="excluit" value="Excluir">
+                              <input type="submit" name="excluir" value="Excluir">
                           </form>
                       </th>
                   </tr>   

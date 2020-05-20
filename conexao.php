@@ -19,15 +19,6 @@ function abrirBanco() {
     return $conexao;
 }
 
-// Função responsável inseir uma pessoa no meu banco de dados
-  /**   function inserirPessoa() {
-        $banco = abrirBanco();
-        $sql = "INSERT INTO usuarios(nome, cpf, email, login, senha, celular) 
-        VALUES ('{$_POST["nome"]}','{$_POST["cpf"]}','{$_POST["email"]}','{$_POST["login"]}', '{$_POST["senha"]}'), '{$_POST["celular"]}'";
-        $banco->query($sql);
-        $banco->close();
-        voltarIndex();
-    }  */
     function inserirPessoa(){
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
         $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_NUMBER_INT);

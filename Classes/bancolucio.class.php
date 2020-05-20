@@ -4,15 +4,26 @@
  * Só que de uma forma muito mais resumida e passível de bugs
  * @author Lúcio Bergamasco
  */
-
-$servidor = "localhost";
+/**
+ * $servidor = "localhost";
 $usuario = "root";
 $senha = "";
 $dbname = "unisale";
+ * 
+ * 
+ */
+
 
 //Criar a conexão
 
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+/**
+ * Essa linha conecta no banco
+ * $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+*/
 
+define('HOST', 'localhost');
+define('USER', 'root');
+define('PASS', '');
+define('BASE', 'unisale');
 
 ?>

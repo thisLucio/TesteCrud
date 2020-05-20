@@ -24,7 +24,7 @@
                         <span></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="telefone" placeholder="Digite seu Telefone" />
+                        <input type="text" name="celular" placeholder="Digite seu Telefone" />
                         <span></span>
                     </div>
                     <div class="form-group">

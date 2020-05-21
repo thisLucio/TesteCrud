@@ -4,9 +4,9 @@ include("conexao.php");
 $pessoa = selectIdPessoa($_POST["idusuarios"]);
 ?>
 
-<link rel="stylesheet" type="text/css" href="estilo/table.css">
-<link rel="stylesheet" href="estilo/style.css">
-    <link rel="stylesheet" href="estilo/comum.css">
+<link rel="stylesheet" type="text/css" href="assets/css/table.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/comum.css">
 <meta charset="UTF-8">
 <div class="container">
     <form name="dadosPessoa" action="conexao.php" method="post">       

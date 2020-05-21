@@ -18,7 +18,7 @@
 <div class="container">
     <body>
      <div class="posicionarCabecalho">
-          <h1>Agenda Pessoal</h1>
+          <h1>Tabela de Registros</h1>
       </div>
       <table border="1" class="table">
           <thead class="thead-light">
@@ -28,7 +28,6 @@
                   <th>Celular</th>
                   <th>Email</th>
                   <th>Login</th>
-                
                   <th>Editar</th>
                   <th>Excluir</th>
               </tr>
@@ -63,7 +62,7 @@
           </tbody>
      </table>
       <div class="text-center">
-           <button type="button" class="btn btn-primary"><a href="inserir.php">Adicionar pessoa</a></button>
+           <button type="button" class="btn btn-primary"><a href="inserir.php">Adicionar usuário</a></button>
       </div>
     </body>
 </div>

@@ -25,7 +25,7 @@ function abrirBanco() {
         $telefone = filter_input(INPUT_POST, 'celular', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-        $senha =filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+        $senha = MD5($_POST['senha']);
         $banco = abrirBanco();
         $sql = "INSERT INTO usuarios ( cpf, nome, celular, email, login, senha) VALUES ('$cpf', '$nome', '$telefone', '$email', '$login', '$senha')";
         $banco->query($sql);
@@ -72,6 +72,8 @@ function abrirBanco() {
         $pessoa = mysqli_fetch_assoc($resultado);
         return $pessoa;
     }
+
+  
 
 // Após inserir uma nova pessoa, retorna para a página principal
     function voltarIndex(){

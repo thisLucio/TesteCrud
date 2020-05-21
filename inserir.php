@@ -33,7 +33,7 @@
                     <span></span>
                     </div>
                     <div class="form-group">
-                    <input type="text" name="senha" placeholder="Digite sua senha:" />
+                    <input type="password" name="senha" placeholder="Digite sua senha:" />
                     <span></span>
                     </div>
                 <tr>

@@ -2,13 +2,13 @@
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/table.css">
-<link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/comum.css">
+<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/comum.css">
 <meta charset="UTF-8">
 <div class="container">
     <form name="dadosPessoa" action="conexao.php" method="post">
     <div class="logo">
-                    <img src="../assets/img/user.png" alt="" />
+                    <img src="assets/img/user.png" alt="" />
                     <h1>Cadastrar Usuário</h1>
                     </div>
             

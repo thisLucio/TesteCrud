@@ -75,7 +75,7 @@ function abrirBanco() {
 
 // Após inserir uma nova pessoa, retorna para a página principal
     function voltarIndex(){
-        header("Location:index.php");
+        header("Location:menu.php");
     }
 
 ?>

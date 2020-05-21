@@ -1,6 +1,6 @@
 <?php
 
-// Verifica se o POST existe antes de inserir uma nova pessoa
+// Verifica se o POST existe antes de inserir um novo registro
 if(isset($_POST["acao"])){
     if ($_POST["acao"]=="inserir"){
         inserirPessoa();
@@ -13,7 +13,7 @@ if(isset($_POST["acao"])){
     }
 }
 
-// Responsável por criar uma conexão com meu banco
+// Essa função cria 
 function abrirBanco() {
     $conexao = new mysqli("localhost", "root", "", "unisale");
     return $conexao;
